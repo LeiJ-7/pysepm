@@ -203,6 +203,7 @@ def llr(clean_speech, processed_speech, fs, used_for_composite=False, frameLen=0
     distortion = np.sort(distortion)
     distortion = distortion[:int(round(len(distortion)*alpha))]
     return np.mean(distortion)
+	#return np.nan_to_num(np.mean(distortion))   #参见speechbrain  composite_eval.py
 
 
 @jit
